@@ -1,3 +1,7 @@
-<?php
-echo "Apache + PHP 서버가 Windows에서 잘 실행되었습니다!";
-?>
+<DOCTYPE html>
+<html>
+<body>
+<a href="http://localhost:8080/register.php">회원가입</a>
+<a href="http://localhost:8080/login.php">로그인</a>
+</body>
+</html>
