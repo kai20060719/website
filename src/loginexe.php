@@ -10,7 +10,7 @@ $result = mysqli_query($con,$sel);
     if(mysqli_num_rows($result) > 0){
         echo "로그인 성공!<br>";
         echo '<a href="http://localhost:8080/member.php">회원 페이지로 이동</a>';
-        return;
+        exit;
        }
 
 echo "해당 회원 정보는 없습니다";
