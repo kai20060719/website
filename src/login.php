@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <body>
 <h1> 로그인 <tb> </h1>

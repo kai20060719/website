@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <body>
 <h1> 회원가입 <tb> </h1>
