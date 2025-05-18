@@ -12,20 +12,19 @@ pw
 '{$_POST['password']}'
 )";
 mysqli_query($con,$set);
-$sel = "SELECT * FROM information";
+$sel = "SELECT id FROM information WHERE id = '{$_POST['id']}'";
 $result = mysqli_query($con,$sel);
 ?>
 <!DOCTYPE html>
 <html>
 <body>
 <?php
-while($row = mysqli_fetch_array($result)){
-    if(strcmp($row ['id'],$_POST['id']) == 0){
+    if(mysqli_num_rows($result) > 0){
         echo "이미 있는 id입니다.다시 입력해주세요<br>";
         echo '<a href="http://localhost:8080/">돌아가기</a>';
-        return;
+        exit;
     }
-}
+
 mysqli_query($con,$ins);
 echo "회원 가입 성공";
 ?>
