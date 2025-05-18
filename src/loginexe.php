@@ -1,4 +1,5 @@
 <?php
+session_start();
 $con = mysqli_connect("db","exampleuser","examplepass","exampledb");
 $sel = "SELECT * FROM information WHERE  id = '{$_POST['id']}' AND  pw = '{$_POST['password']}'";
 $result = mysqli_query($con,$sel);
@@ -9,6 +10,7 @@ $result = mysqli_query($con,$sel);
 <?php
     if(mysqli_num_rows($result) > 0){
         echo "로그인 성공!<br>";
+        $_SESSION['user_id'] = $_POST['id'];
         echo '<a href="http://localhost:8080/member.php">회원 페이지로 이동</a>';
         exit;
        }
