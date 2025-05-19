@@ -1,9 +1,5 @@
 <?php
 $con = mysqli_connect("db","exampleuser","examplepass","exampledb");
-$set = "CREATE TABLE IF NOT EXISTS information(
-id VARCHAR(50) NOT NULL PRIMARY KEY,
-pw VARCHAR(50) NOT NULL 
-)";
 $ins = "INSERT INTO information(
 id,
 pw
@@ -11,7 +7,6 @@ pw
 '{$_POST['id']}',
 '{$_POST['password']}'
 )";
-mysqli_query($con,$set);
 $sel = "SELECT id FROM information WHERE id = '{$_POST['id']}'";
 $result = mysqli_query($con,$sel);
 ?>
