@@ -18,7 +18,7 @@ echo '<a href="http://localhost:8080/textdelete.php?id='.$row['id'].'">글 삭�
 }
 ?>
 <?php echo '<p>'.$row['description'].'</p>'; ?>
-<p><a href="http://localhost:8080/member.php">돌아가기</a></p>
 </form>
+<p><a href="http://localhost:8080/member.php">돌아가기</a></p>
 </body>
 </html>
