@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1> 회원가입 <tb> </h1>
+<h1> 회원가입 <br> </h1>
 <form action = "registerexe.php" method="post">
 <input type="text" name="id" placeholder="id를 입력하세요">
 <input type="text" name="password" placeholder="password를 입력하세요">
