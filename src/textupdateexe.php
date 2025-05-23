@@ -4,6 +4,10 @@ if(!isset($_SESSION['user_id'])){
     header("Location:index.php");
     exit;
 }
+if($_POST['title'] == '' OR $_POST['description'] == ''){
+    header("Location:textupdate.php?id=".$_POST['id']);
+    exit;
+}
 $con = mysqli_connect("db","exampleuser","examplepass","exampledb");
 $upd = "
     UPDATE board

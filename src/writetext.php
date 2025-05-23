@@ -13,6 +13,7 @@ if(!isset($_SESSION['user_id'])){
 <p><input type="text" name="title" placeholder="제목"></p>
 <p><textarea name="description" placeholder="본문"></textarea></p>
 <p><input type="submit" value="작성"></p>
+<p>*제목이나 본문에 아무것도 입력하지 않으면 안됩니다!</p>
 <p><a href="http://localhost:8080/member.php">돌아가기</a></p>
 </form>
 </body>
