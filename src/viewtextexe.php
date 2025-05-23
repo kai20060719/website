@@ -14,7 +14,10 @@ $row = mysqli_fetch_assoc($result);
 <?php 
 if (strcmp($row['user_id'],$_SESSION['user_id']) == 0){
 echo '<p><a href="http://localhost:8080/textupdate.php?id='.$row['id'].'">글 수정</a>    ';  
-echo '<a href="http://localhost:8080/textdelete.php?id='.$row['id'].'">글 삭제</a></p>';
+echo '<form action = "textdelete.php" method="post">';
+echo '<input type="hidden" name="id" value='.$row['id'].'>';
+echo '<input type= "submit" value="글 삭제">';
+echo '</form>';
 }
 ?>
 <?php echo '<p>'.$row['description'].'</p>'; ?>
