@@ -1,4 +1,9 @@
 <?php
+if($_POST['id'] == '' OR $_POST['password'] == ''){
+    header("Location:register.php");
+    exit;
+}
+
 $con = mysqli_connect("db","exampleuser","examplepass","exampledb");
 $ins = "INSERT INTO information(
 id,
