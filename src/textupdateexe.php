@@ -1,7 +1,12 @@
 <?php 
 session_start();
+if(!isset($_SESSION['user_id'])){
+    header("Location:index.php");
+    exit;
+}
 $con = mysqli_connect("db","exampleuser","examplepass","exampledb");
-$upd = "UPDATE board
+$upd = "
+    UPDATE board
     SET
     title = '{$_POST['title']}',
     description = '{$_POST['description']}',
