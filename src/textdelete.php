@@ -4,6 +4,7 @@ if(!isset($_SESSION['user_id'])){
     header("Location:index.php");
     exit;
 }
+
 $con = mysqli_connect("db","exampleuser","examplepass","exampledb");
 $del = "DELETE
         FROM board
